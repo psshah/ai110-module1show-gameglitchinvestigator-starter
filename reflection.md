@@ -17,7 +17,7 @@ Document at least 3 bugs you found. Add rows as needed.
 |Guess of 10 (secret number 35)|"Go HIGHER" hint|"Go LOWER" hint|"None"|
 | Total attemps less by 1 (eg. difficulty=normal, attempts=8, actual entries allowed=7|Should allow 8 attempts |Allows only 7 attempts|Out of attempts! Attempts left: 1|
 | New game does not reset state|Clicking on new game should reset all state| Resets secret and attempts. Does not reset score and history. Does not allow new attempt/submission|None|
-| | | | |
+|Submit guess does not clear the textbox |On Sumbit guess button, textbox should be cleared and score, attempts,history should be updated. |Submit guess does not update session state, need to manually clear text box |None |
 
 ---
 
