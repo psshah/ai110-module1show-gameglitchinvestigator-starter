@@ -7,22 +7,23 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - What did the game look like the first time you ran it?
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
+  1. Hint was backwards. i.e. if guess was higher than secret number, hint would say 'Go Higher' instead of 'Go Lower'.
 
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
-|-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
+|Guess of 10 (secret number 35)|"Go HIGHER" hint|"Go LOWER" hint|"None"|
+| Total attemps less by 1 (eg. difficulty=normal, attempts=8, actual entries allowed=7|Should allow 8 attempts |Allows only 7 attempts|Out of attempts! Attempts left: 1|
+| New game does not reset state|Clicking on new game should reset all state| Resets secret and attempts. Does not reset score and history. Does not allow new attempt/submission|None|
 | | | | |
 
 ---
 
 ## 2. How did you use AI as a teammate?
 
-- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)? Claude and ChatGPT
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
