@@ -18,6 +18,7 @@ Document at least 3 bugs you found. Add rows as needed.
 | Total attemps less by 1 (eg. difficulty=normal, attempts=8, actual entries allowed=7|Should allow 8 attempts |Allows only 7 attempts|Out of attempts! Attempts left: 1|
 | New game does not reset state|Clicking on new game should reset all state| Resets secret and attempts. Does not reset score and history. Does not allow new attempt/submission|None|
 |Submit guess does not clear the textbox |On Sumbit guess button, textbox should be cleared and score, attempts,history should be updated. |Submit guess does not update session state, need to manually clear text box |None |
+|Info string displayed incorrect range|Should display correct range per difficulty level|Info string displays range as 1,100 always|"None"|
 
 ---
 
@@ -62,12 +63,15 @@ Yes, AI helped me add some edge cases to tests. In fact, it also added a design 
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+Streamlit runs the entire script when user interacts and hence it does not persist state. So we need to use session state variable to persist any information required between user interactions. 
 
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
+  Identify the bug first, thinking about a possible fix first before prompting AI. This makes it easier to validate suggested fixes by AI as opposed to asking AI to fix first.
 - What is one thing you would do differently next time you work with AI on a coding task?
+  Give it the relevant files as context instead of asking it to read through the entire project/folder. If possible, specify the functions as well. More efficient, saves tokens and gives more accurate response.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  AI generated code has very good naming conventions and styling, I would like to incorporate those. On the other hand, how code is structured for long-term readability is something I would like to guide it on. eg. unit tests in one function versus multiple functions.

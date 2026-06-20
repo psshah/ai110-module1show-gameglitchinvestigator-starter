@@ -26,27 +26,50 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+This is an AI generated number guessing game where the player needs to guess the secret number within given range to win. It allows fixed number of attempts based on difficulty level.
+
 - [ ] Detail which bugs you found.
+- Hints for guessed number were reversed.
+- Range shown in info bar was static and did not change per difficulty level.
+- New game button does not work.
+- Total attemps allowed was less by 1.
+- Textbox does not clear when Submit button is pressed and state does not get updated.
+- If we change game difficulty level mid-way during playing, secret number does not reset.
+
 - [ ] Explain what fixes you applied.
+- Fixed comparison logic in function providing hint.
+- Fixed info statement to display correct range.
+- Initialized attempts to 0 to total attempts was equal to those allowed.
+- Reset all session state variables when starting a new game.
+- Removed simulated glitchy behaviour from code.
+
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. User enters guess of 10
+2. Game returns "Too Low", reduces attempts left by 1.
+3. Score and history update correctly after each guess.
+4. User enters a guess of 20 → Game returns "Too Low"
+5. User enters a guess of 30 → Game returns "Too High"
+6. User enters a guess of 25 → Game returns "Too Low"
+7. User enters 28, Game ends after the correct guess.
 
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+**Screenshot** *(optional)*: 
+![Screenshot](winning_screenshot.png)
 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+python3 -m pytest test_logic_utils.py -v
+=================================================================== test session starts ===================================================================
+....                                                                
+
+test_logic_utils.py::test_parse_guess PASSED                                                                                                        [ 33%]
+test_logic_utils.py::test_get_range_for_difficulty PASSED                                                                                           [ 66%]
+test_logic_utils.py::test_check_guess PASSED                                                                                                        [100%]
+==================================================================== 3 passed in 0.01s ====================================================================
 ```
 
 ## 🚀 Stretch Features
