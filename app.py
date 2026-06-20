@@ -30,6 +30,7 @@ st.sidebar.caption(f"Attempts allowed: {attempt_limit}")
 if "secret" not in st.session_state:
     st.session_state.secret = random.randint(low, high)
 
+#FIX: Init attempts to 0 to fix one less atempt being allowed than intended.
 if "attempts" not in st.session_state:
     st.session_state.attempts = 0
 
@@ -69,6 +70,8 @@ with col2:
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
+#FIX: Reset game state when starting a new game to fix new game working correctly, 
+# including attempts, secret number, history, and status.
 if new_game:
     st.session_state.attempts = 0
     st.session_state.secret = random.randint(low, high)
@@ -96,6 +99,7 @@ if submit:
     else:
         st.session_state.history.append(guess_int)
 
+        #FIX: Removed unnecessary type conversion that simulated glitchy behavior.
         outcome, message = check_guess(guess_int, st.session_state.secret)
 
         if show_hint:
