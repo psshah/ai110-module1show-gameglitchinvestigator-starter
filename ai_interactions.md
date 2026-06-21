@@ -42,18 +42,24 @@
 
 ```
 <!-- Paste the prompt you gave the AI -->
+Review logic_utils.py and generate professional style docstrings for each function, method in that file. Follow PEP8 style convention.
+Do not change any existing code or logic. 
+Leave existing docstrings as is unless there is an overlap.
+Use clear, concise language. Docstring should descrive purpose of the function, parameters, return value and exceptions raised. 
 ```
 
 **Linting output before:**
 
 ```
 <!-- Paste relevant linter warnings/errors -->
+(.venv) priyankashah@Priyankas-MacBook-Air ai110-module1show-gameglitchinvestigator-starter % ruff check logic_utils.py 
+All checks passed!
 ```
 
 **Changes applied:**
 
 <!-- Describe what you changed based on the AI's suggestions -->
-
+Added docstring to each function clearly describing it's behaviour, intended usage, input and expected output / exceptions raised.
 ---
 
 ## Model Comparison (SF11)
