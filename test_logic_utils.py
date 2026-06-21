@@ -81,3 +81,11 @@ def test_check_guess():
     # incompatible types raise TypeError
     with pytest.raises(TypeError):
         check_guess(42, "fifty")
+
+    # non-numeric string as guess raises TypeError
+    with pytest.raises(TypeError):
+        check_guess("abc", 50)
+
+    # empty string as guess raises TypeError
+    with pytest.raises(TypeError):
+        check_guess("", 50)

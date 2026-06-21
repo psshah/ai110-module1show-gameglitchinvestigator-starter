@@ -28,9 +28,9 @@
 
 | Edge Case | Prompt Used | AI-Suggested Test | Did It Pass? | Your Reasoning |
 |-----------|-------------|-------------------|--------------|----------------|
-| | | | | |
-| | | | | |
-| | | | | |
+|non-numeric string |add test case to test_check_guess() in test_logic_utils.py to test for non-numeric string, negative number and empty input. Validate it raises error | |Yes | |
+|empty input |add test case to test_check_guess() in test_logic_utils.py to test for empty input. Validate it raises error | |Yes | |
+|non-numeric string in parse_guess|add test case to test_parie_guess() in test_logic_utils.py to test for non-numeric string and empty input.| |Yes | |
 
 ---
 
