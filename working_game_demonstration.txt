@@ -1,0 +1,27 @@
+(.venv) priyankashah@Priyankas-MacBook-Air ai110-module1show-gameglitchinvestigator-starter % python3 -m pytest test_logic_utils.py -v
+=================================================================== test session starts ===================================================================
+platform darwin -- Python 3.13.13, pytest-9.0.3, pluggy-1.6.0 -- /Users/priyankashah/Documents/Development/codepath/ai110-module1show-gameglitchinvestigator-starter/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /Users/priyankashah/Documents/Development/codepath/ai110-module1show-gameglitchinvestigator-starter
+plugins: anyio-4.13.0
+collected 3 items                                                                                                                                         
+
+test_logic_utils.py::test_parse_guess PASSED                                                                                                        [ 33%]
+test_logic_utils.py::test_get_range_for_difficulty PASSED                                                                                           [ 66%]
+test_logic_utils.py::test_check_guess PASSED                                                                                                        [100%]
+
+==================================================================== 3 passed in 0.01s ====================================================================
+
+(.venv) priyankashah@Priyankas-MacBook-Air ai110-module1show-gameglitchinvestigator-starter % python -m streamlit run app.py
+
+2026-06-21 11:06:15.148 Uvicorn server started on 0.0.0.0:8501
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.1.32:8501
+
+  For better performance, install the Watchdog module:
+
+  $ xcode-select --install
+  $ pip install watchdog
